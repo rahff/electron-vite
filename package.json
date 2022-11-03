@@ -9,9 +9,14 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && electron-builder"
+    "build": "tsc && vite build && electron-builder",
+    "test": "ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@types/jasmine": "^4.3.0",
+    "jasmine": "^4.5.0",
+    "ts-node": "^10.9.1"
+  },
   "devDependencies": {
     "electron": "^19.0.6",
     "electron-builder": "^23.1.0",
